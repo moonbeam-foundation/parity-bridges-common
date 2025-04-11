@@ -20,7 +20,9 @@ use strum::{EnumString, VariantNames};
 use crate::bridges::{
 	kusama_polkadot::{
 		kusama_headers_to_bridge_hub_polkadot::KusamaToBridgeHubPolkadotCliBridge,
+		kusama_headers_to_moonbeam::KusamaToMoonbeamCliBridge,
 		polkadot_headers_to_bridge_hub_kusama::PolkadotToBridgeHubKusamaCliBridge,
+		polkadot_headers_to_moonriver::PolkadotToMoonriverCliBridge,
 	},
 	polkadot_bulletin::{
 		polkadot_bulletin_headers_to_bridge_hub_polkadot::PolkadotBulletinToBridgeHubPolkadotCliBridge,
@@ -34,6 +36,10 @@ use crate::bridges::{
 		rococo_headers_to_bridge_hub_westend::RococoToBridgeHubWestendCliBridge,
 		westend_headers_to_bridge_hub_rococo::WestendToBridgeHubRococoCliBridge,
 	},
+	stagenet_alphanet::{
+		stagenet_relay_headers_to_betanet,
+		betanet_relay_headers_to_stagenet
+	}
 };
 
 use substrate_relay_helper::cli::relay_headers::{
@@ -72,6 +78,10 @@ pub enum RelayHeadersBridge {
 	PolkadotBulletinToBridgeHubPolkadot,
 	RococoToRococoBulletin,
 	RococoBulletinToBridgeHubRococo,
+	PolkadotToMoonriver,
+	KusamaToMoonbeam,
+	StagenetToBetanet,
+	BetanetToStagenet,
 }
 
 impl HeadersRelayer for RococoToBridgeHubWestendCliBridge {}
@@ -82,6 +92,10 @@ impl HeadersRelayer for PolkadotToPolkadotBulletinCliBridge {}
 impl HeadersRelayer for PolkadotBulletinToBridgeHubPolkadotCliBridge {}
 impl HeadersRelayer for RococoToRococoBulletinCliBridge {}
 impl HeadersRelayer for RococoBulletinToBridgeHubRococoCliBridge {}
+impl HeadersRelayer for PolkadotToMoonriverCliBridge {}
+impl HeadersRelayer for KusamaToMoonbeamCliBridge {}
+impl HeadersRelayer for betanet_relay_headers_to_stagenet::CliBridge {}
+impl HeadersRelayer for stagenet_relay_headers_to_betanet::CliBridge {}
 
 impl RelayHeaders {
 	/// Run the command.
@@ -103,6 +117,14 @@ impl RelayHeaders {
 				RococoToRococoBulletinCliBridge::relay_headers(self.params),
 			RelayHeadersBridge::RococoBulletinToBridgeHubRococo =>
 				RococoBulletinToBridgeHubRococoCliBridge::relay_headers(self.params),
+			RelayHeadersBridge::PolkadotToMoonriver =>
+				PolkadotToMoonriverCliBridge::relay_headers(self.params),
+			RelayHeadersBridge::KusamaToMoonbeam =>
+				KusamaToMoonbeamCliBridge::relay_headers(self.params),
+			RelayHeadersBridge::BetanetToStagenet =>
+				betanet_relay_headers_to_stagenet::CliBridge::relay_headers(self.params),
+			RelayHeadersBridge::StagenetToBetanet =>
+				stagenet_relay_headers_to_betanet::CliBridge::relay_headers(self.params),
 		}
 		.await
 	}
@@ -128,6 +150,14 @@ impl RelayHeader {
 				RococoToRococoBulletinCliBridge::relay_header(self.params),
 			RelayHeadersBridge::RococoBulletinToBridgeHubRococo =>
 				RococoBulletinToBridgeHubRococoCliBridge::relay_header(self.params),
+			RelayHeadersBridge::PolkadotToMoonriver =>
+				PolkadotToMoonriverCliBridge::relay_header(self.params),
+			RelayHeadersBridge::KusamaToMoonbeam =>
+				KusamaToMoonbeamCliBridge::relay_header(self.params),
+			RelayHeadersBridge::BetanetToStagenet =>
+				betanet_relay_headers_to_stagenet::CliBridge::relay_header(self.params),
+			RelayHeadersBridge::StagenetToBetanet =>
+				stagenet_relay_headers_to_betanet::CliBridge::relay_header(self.params),
 		}
 		.await
 	}
