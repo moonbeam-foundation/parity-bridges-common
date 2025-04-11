@@ -14,19 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity Bridges Common.  If not, see <http://www.gnu.org/licenses/>.
 
-//! Declaration of all bridges between Kusama Bridge Hub and Polkadot Bridge Hub.
+//! Declaration of all bridges between Stagenet relay and Alphanet relay.
 
-pub mod bridge_hub_kusama_messages_to_bridge_hub_polkadot;
-pub mod bridge_hub_kusama_parachains_to_bridge_hub_polkadot;
-pub mod bridge_hub_polkadot_messages_to_bridge_hub_kusama;
-pub mod bridge_hub_polkadot_parachains_to_bridge_hub_kusama;
-pub mod kusama_headers_to_bridge_hub_polkadot;
-pub mod polkadot_headers_to_bridge_hub_kusama;
-
-// Moonbeam <> Moonriver modules
-pub mod kusama_headers_to_moonbeam;
-pub mod kusama_parachains_to_moonbeam_polkadot;
-pub mod moonbeam_polkadot_messages_to_moonriver_kusama;
-pub mod moonriver_kusama_messages_to_moonbeam_polkadot;
-pub mod polkadot_headers_to_moonriver;
-pub mod polkadot_parachains_to_moonriver_kusama;
+// Betanet <> Stagenet modules
+pub mod betanet_messages_to_stagenet;
+pub mod betanet_parachains_to_stagenet;
+pub mod betanet_relay_headers_to_stagenet;
+pub mod stagenet_messages_to_betanet;
+pub mod stagenet_parachains_to_betanet;
+pub mod stagenet_relay_headers_to_betanet;
