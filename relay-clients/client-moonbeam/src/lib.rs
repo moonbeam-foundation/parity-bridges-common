@@ -147,5 +147,5 @@ impl ChainWithMessages for Moonbeam {
 
 impl ChainWithRuntimeVersion for Moonbeam {
 	const RUNTIME_VERSION: Option<SimpleRuntimeVersion> =
-		Some(SimpleRuntimeVersion { spec_version: 3_700, transaction_version: 3 });
+		Some(SimpleRuntimeVersion { spec_version: 3_800, transaction_version: 3 });
 }

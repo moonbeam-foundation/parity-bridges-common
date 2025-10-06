@@ -147,5 +147,5 @@ impl ChainWithMessages for Moonriver {
 
 impl ChainWithRuntimeVersion for Moonriver {
 	const RUNTIME_VERSION: Option<SimpleRuntimeVersion> =
-		Some(SimpleRuntimeVersion { spec_version: 3_700, transaction_version: 3 });
+		Some(SimpleRuntimeVersion { spec_version: 3_900, transaction_version: 3 });
 }
