@@ -36,10 +36,7 @@ use crate::bridges::{
 		rococo_headers_to_bridge_hub_westend::RococoToBridgeHubWestendCliBridge,
 		westend_headers_to_bridge_hub_rococo::WestendToBridgeHubRococoCliBridge,
 	},
-	stagenet_alphanet::{
-		stagenet_relay_headers_to_betanet,
-		betanet_relay_headers_to_stagenet
-	}
+	stagenet_alphanet::{betanet_relay_headers_to_stagenet, stagenet_relay_headers_to_betanet},
 };
 
 use substrate_relay_helper::cli::relay_headers::{
