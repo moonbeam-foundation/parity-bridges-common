@@ -81,37 +81,37 @@ wasm-testbed = { git = "https://github.com/chevdor/subwasm", branch = "master" }
 scale-info = { version = "2.11.6", default-features = false, features = ["derive"] }
 subxt = { version = "0.40.1", default-features = false, features = ["native"] }
 bp-bridge-hub-polkadot = { path = "./chains/chain-bridge-hub-polkadot" }
-bp-header-chain = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-messages = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-parachains = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+bp-header-chain = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-messages = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-parachains = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
 bp-polkadot = { path = "./chains/chain-polkadot" }
-bp-polkadot-core = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+bp-polkadot-core = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
 bp-kusama = { path = "./chains/chain-kusama" }
 bp-moonbase = { path = "./chains/chain-moonbase" }
 bp-moonriver = { path = "./chains/chain-moonriver" }
 bp-moonbeam = { path = "./chains/chain-moonbeam" }
-bp-runtime = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bridge-runtime-common = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-relay-substrate-client = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-sp-io = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-sp-core = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-sp-weights = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-westend = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-relay-utils = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-sp-consensus-grandpa = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-sp-session = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-polkadot-bulletin = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+bp-runtime = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bridge-runtime-common = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+relay-substrate-client = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+sp-io = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+sp-core = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+sp-runtime = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+sp-weights = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-westend = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+relay-utils = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+sp-consensus-grandpa = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+sp-session = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-polkadot-bulletin = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
 bp-bridge-hub-kusama = { path = "./chains/chain-bridge-hub-kusama" }
-bp-asset-hub-rococo = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-asset-hub-westend = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-bridge-hub-rococo = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-rococo = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-bridge-hub-westend = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-frame-support = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master"}
-sp-api = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master"}
-sp-std = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master"}
-bp-bridge-hub-cumulus = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master"}
+bp-asset-hub-rococo = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-asset-hub-westend = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-bridge-hub-rococo = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-rococo = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-bridge-hub-westend = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+frame-support = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512"}
+sp-api = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512"}
+sp-std = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512"}
+bp-bridge-hub-cumulus = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512"}
 anyhow = "1.0"
 async-std = "1.13.2"
 async-trait = "0.1.89"
@@ -125,8 +125,8 @@ structopt = "0.3"
 signal-hook = "0.4.3"
 signal-hook-async-std = "0.4.0"
 strum = { version = "0.28.0", features = ["derive"] }
-pallet-bridge-parachains = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-parachains-relay = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+pallet-bridge-parachains = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+parachains-relay = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
 relay-asset-hub-rococo-client = { path = "./relay-clients/client-asset-hub-rococo" }
 relay-asset-hub-westend-client = { path = "./relay-clients/client-asset-hub-westend" }
 relay-bridge-hub-kusama-client = { path = "./relay-clients/client-bridge-hub-kusama" }
@@ -141,9 +141,9 @@ relay-westend-client = { path = "./relay-clients/client-westend" }
 relay-moonbase-client = { path = "./relay-clients/client-moonbase" }
 relay-moonbeam-client = { path = "./relay-clients/client-moonbeam" }
 relay-moonriver-client = { path = "./relay-clients/client-moonriver" }
-substrate-relay-helper = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
-bp-test-utils = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+substrate-relay-helper = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
+bp-test-utils = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
 hex-literal = "0.4"
-sp-keyring = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-keyring = { git = "https://github.com/moonbeam-foundation/polkadot-sdk", branch = "moonbeam-polkadot-stable2512" }
 tempfile = "3.26"
 finality-grandpa = { version = "0.16.2" }
